@@ -57,6 +57,8 @@ extension AddMovieView {
         } catch {
             print(error.localizedDescription)
         }
+        
+        dismiss()
     }
 }
 
