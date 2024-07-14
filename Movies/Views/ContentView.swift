@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isAddMoviePresented = false
     
     var body: some View {
         NavigationStack {
@@ -16,20 +15,6 @@ struct ContentView: View {
                 MovieListView()
             }
             .padding()
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        isAddMoviePresented.toggle()
-                    } label: {
-                        Text("Add")
-                    }
-                }
-            }
-            .fullScreenCover(isPresented: $isAddMoviePresented) {
-                NavigationStack {
-                    AddMovieView()
-                }
-            }
         }
     }
 }
