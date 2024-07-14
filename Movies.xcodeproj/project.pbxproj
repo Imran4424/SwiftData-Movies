@@ -15,6 +15,7 @@
 		1D0448952C03259300A7734E /* AddMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0448942C03259300A7734E /* AddMovieView.swift */; };
 		1D0448982C0326DC00A7734E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0448972C0326DC00A7734E /* String+Extensions.swift */; };
 		1D608F812C43A807002CB0F2 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D608F802C43A807002CB0F2 /* MovieListView.swift */; };
+		1D608F832C43B5C1002CB0F2 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D608F822C43B5C1002CB0F2 /* MovieDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		1D0448942C03259300A7734E /* AddMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieView.swift; sourceTree = "<group>"; };
 		1D0448972C0326DC00A7734E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		1D608F802C43A807002CB0F2 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		1D608F822C43B5C1002CB0F2 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				1D0448842C03087200A7734E /* ContentView.swift */,
 				1D0448942C03259300A7734E /* AddMovieView.swift */,
 				1D608F802C43A807002CB0F2 /* MovieListView.swift */,
+				1D608F822C43B5C1002CB0F2 /* MovieDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				1D0448832C03087200A7734E /* MoviesApp.swift in Sources */,
 				1D0448922C03246F00A7734E /* Movie.swift in Sources */,
 				1D608F812C43A807002CB0F2 /* MovieListView.swift in Sources */,
+				1D608F832C43B5C1002CB0F2 /* MovieDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
