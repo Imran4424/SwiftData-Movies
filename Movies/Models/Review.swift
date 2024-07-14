@@ -11,12 +11,12 @@ import SwiftData
 @Model
 final class Review {
     var subject: String
-    var body: String
+    var bodyDescription: String
     var movie: Movie?
     
     init(subject: String, body: String, movie: Movie? = nil) {
         self.subject = subject
-        self.body = body
+        self.bodyDescription = body
         self.movie = movie
     }
 }
