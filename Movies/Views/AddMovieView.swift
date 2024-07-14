@@ -16,7 +16,15 @@ struct AddMovieView: View {
     @State private var year: Int?
     
     var isFormValid: Bool {
-        return title.isEmptyOrWhiteSpace && year != nil
+        if title.isEmptyOrWhiteSpace {
+            return false
+        }
+        
+        if year == nil {
+            return false
+        }
+        
+        return true
     }
     
     var body: some View {

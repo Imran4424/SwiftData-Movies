@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isAddMoviePresented = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                MovieListView()
+            }
+            .padding()
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isAddMoviePresented.toggle()
+                    } label: {
+                        Text("Add")
+                    }
+                }
+            }
+            .fullScreenCover(isPresented: $isAddMoviePresented) {
+                NavigationStack {
+                    AddMovieView()
+                }
+            }
         }
-        .padding()
     }
 }
 
