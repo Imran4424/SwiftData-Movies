@@ -9,7 +9,7 @@ import SwiftData
 import SwiftUI
 
 struct AddReviewView: View {
-    @Environment(\.modelContext) private var modelContext
+    @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     
     let movie: Movie
@@ -39,6 +39,17 @@ struct AddReviewView: View {
             
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
+                    let review = Review(subject: subject, body: bodyDescription)
+                    review.movie = movie
+                    context.insert(review)
+                    
+                    do {
+                        try context.save()
+                        movie.review.append(review)
+                    } catch {
+                        print(error.localizedDescription)
+                    }                    
+                    
                     dismiss()
                 } label: {
                     Text("Save")
