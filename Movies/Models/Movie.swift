@@ -15,7 +15,7 @@ final class Movie {
     
     // MARK: - One to many
     @Relationship(deleteRule: .cascade, inverse: \Review.movie)
-    var review: [Review] = []
+    var reviews: [Review] = []
     
     
     init(title: String, year: Int) {

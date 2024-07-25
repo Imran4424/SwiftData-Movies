@@ -45,7 +45,7 @@ struct AddReviewView: View {
                     
                     do {
                         try context.save()
-                        movie.review.append(review)
+                        movie.reviews.append(review)
                     } catch {
                         print(error.localizedDescription)
                     }                    

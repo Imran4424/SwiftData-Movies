@@ -13,6 +13,7 @@ struct MovieDetailView: View {
     let movie: Movie
     @State private var title: String = ""
     @State private var year: Int?
+    @State private var isshowReviewPresented: Bool = false
     
     var body: some View {
         VStack {
@@ -35,10 +36,37 @@ struct MovieDetailView: View {
                     print(error.localizedDescription)
                 }
             }
+            
+            Section("Reviews") {
+                Button {
+                    isshowReviewPresented = true
+                } label: {
+                    Image(systemName: "plus")
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                }
+                
+                if movie.reviews.isEmpty {
+                    ContentUnavailableView {
+                        Text("No reviews yet")
+                    }
+                } else {
+                    List(movie.reviews) { review in
+                        VStack {
+                            Text(review.subject)
+                            Text(review.bodyDescription)
+                        }
+                    }
+                }
+            }
         }
         .onAppear {
             title = movie.title
             year = movie.year
+        }
+        .fullScreenCover(isPresented: $isshowReviewPresented) {
+            NavigationStack {
+                AddReviewView(movie: movie)
+            }
         }
     }
 }
