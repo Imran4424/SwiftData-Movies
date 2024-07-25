@@ -50,7 +50,7 @@ struct MovieDetailView: View {
                         Text("No reviews yet")
                     }
                 } else {
-                    ReviewListView(reviews: movie.reviews)
+                    ReviewListView(movie: movie)
                 }
             }
         }

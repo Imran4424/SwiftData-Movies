@@ -44,8 +44,8 @@ struct AddReviewView: View {
                     context.insert(review)
                     
                     do {
-                        try context.save()
                         movie.reviews.append(review)
+                        try context.save()
                     } catch {
                         print(error.localizedDescription)
                     }                    
