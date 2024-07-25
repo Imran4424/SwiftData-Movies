@@ -50,12 +50,7 @@ struct MovieDetailView: View {
                         Text("No reviews yet")
                     }
                 } else {
-                    List(movie.reviews) { review in
-                        VStack {
-                            Text(review.subject)
-                            Text(review.bodyDescription)
-                        }
-                    }
+                    ReviewListView(reviews: movie.reviews)
                 }
             }
         }
