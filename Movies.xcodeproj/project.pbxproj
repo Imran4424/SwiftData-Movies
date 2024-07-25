@@ -19,6 +19,7 @@
 		1D608F852C43D8CF002CB0F2 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D608F842C43D8CF002CB0F2 /* Review.swift */; };
 		1D608F872C43DD84002CB0F2 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D608F862C43DD84002CB0F2 /* AddReviewView.swift */; };
 		1DFCEA462C52762C00368332 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA452C52762C00368332 /* ReviewListView.swift */; };
+		1DFCEA482C52D68500368332 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA472C52D68500368332 /* Actor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		1D608F842C43D8CF002CB0F2 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		1D608F862C43DD84002CB0F2 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
 		1DFCEA452C52762C00368332 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		1DFCEA472C52D68500368332 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				1D0448912C03246F00A7734E /* Movie.swift */,
 				1D608F842C43D8CF002CB0F2 /* Review.swift */,
+				1DFCEA472C52D68500368332 /* Actor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				1D608F852C43D8CF002CB0F2 /* Review.swift in Sources */,
 				1D0448852C03087200A7734E /* ContentView.swift in Sources */,
 				1D0448952C03259300A7734E /* AddMovieView.swift in Sources */,
+				1DFCEA482C52D68500368332 /* Actor.swift in Sources */,
 				1DFCEA462C52762C00368332 /* ReviewListView.swift in Sources */,
 				1D0448832C03087200A7734E /* MoviesApp.swift in Sources */,
 				1D0448922C03246F00A7734E /* Movie.swift in Sources */,
