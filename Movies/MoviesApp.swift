@@ -15,6 +15,6 @@ struct MoviesApp: App {
                 ContentView()
             }
         }
-        .modelContainer(for: [Movie.self])
+        .modelContainer(for: [Movie.self, Review.self, Actor.self])
     }
 }

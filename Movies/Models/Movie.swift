@@ -20,7 +20,6 @@ final class Movie {
     @Relationship(deleteRule: .noAction, inverse: \Actor.movies)
     var actors: [Actor] = []
     
-    
     init(title: String, year: Int) {
         self.title = title
         self.year = year
