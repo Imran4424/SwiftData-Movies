@@ -51,13 +51,22 @@ struct MovieListView: View {
     @Environment(\.modelContext) private var context
     
     @Query private var movies: [Movie]
+    @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
     
     @State private var isAddMoviePresented: Bool = false
     @State private var isAddActorPresented: Bool = false
     @State private var actorName: String = ""
     
     var body: some View {
-        ComposabeListView(movies: movies)
+        VStack {
+            Text("Movies")
+                .font(.largeTitle)
+            ComposabeListView(movies: movies)
+            
+            Text("Actors")
+                .font(.largeTitle)
+            ActorListView(actors: actors)
+        }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
@@ -111,6 +120,8 @@ extension MovieListView {
         let actor = Actor(name: actorName)
         context.insert(actor)
         
+        // for clearing purpose
+        actorName = ""
     }
 }
 

@@ -20,6 +20,7 @@
 		1D608F872C43DD84002CB0F2 /* AddReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D608F862C43DD84002CB0F2 /* AddReviewView.swift */; };
 		1DFCEA462C52762C00368332 /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA452C52762C00368332 /* ReviewListView.swift */; };
 		1DFCEA482C52D68500368332 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA472C52D68500368332 /* Actor.swift */; };
+		1DFCEA4A2C53B9EA00368332 /* ActorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA492C53B9EA00368332 /* ActorListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		1D608F862C43DD84002CB0F2 /* AddReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewView.swift; sourceTree = "<group>"; };
 		1DFCEA452C52762C00368332 /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		1DFCEA472C52D68500368332 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		1DFCEA492C53B9EA00368332 /* ActorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				1D608F822C43B5C1002CB0F2 /* MovieDetailView.swift */,
 				1D608F862C43DD84002CB0F2 /* AddReviewView.swift */,
 				1DFCEA452C52762C00368332 /* ReviewListView.swift */,
+				1DFCEA492C53B9EA00368332 /* ActorListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				1D0448982C0326DC00A7734E /* String+Extensions.swift in Sources */,
 				1D608F852C43D8CF002CB0F2 /* Review.swift in Sources */,
+				1DFCEA4A2C53B9EA00368332 /* ActorListView.swift in Sources */,
 				1D0448852C03087200A7734E /* ContentView.swift in Sources */,
 				1D0448952C03259300A7734E /* AddMovieView.swift in Sources */,
 				1DFCEA482C52D68500368332 /* Actor.swift in Sources */,
