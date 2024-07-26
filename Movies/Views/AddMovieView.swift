@@ -14,6 +14,7 @@ struct AddMovieView: View {
     
     @State private var title: String = ""
     @State private var year: Int?
+    @State private var selectedActors: Set<Actor> = []
     
     var isFormValid: Bool {
         if title.isEmptyOrWhiteSpace {
@@ -24,6 +25,10 @@ struct AddMovieView: View {
             return false
         }
         
+        if selectedActors.isEmpty {
+            return false
+        }
+        
         return true
     }
     
@@ -31,6 +36,10 @@ struct AddMovieView: View {
         Form {
             TextField("Title", text: $title)
             TextField("Year", value: $year, format: .number)
+            
+            Section("Select Actors") {
+                ActorSelectionView(selectedActors: $selectedActors)
+            }
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -58,6 +67,13 @@ extension AddMovieView {
         }
         
         let movie = Movie(title: title, year: year)
+        movie.actors = Array(selectedActors)
+        
+        selectedActors.forEach { actor in
+            actor.movies.append(movie)
+            context.insert(actor)
+        }
+        
         context.insert(movie)
         
         do {
