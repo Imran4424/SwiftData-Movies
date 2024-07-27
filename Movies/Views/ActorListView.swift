@@ -15,9 +15,15 @@ struct ActorListView: View {
     var body: some View {
         List {
             ForEach(actors) { actor in
-                Text(actor.name)
+                NavigationLink(value: actor) {
+                    ActorCellView(actor: actor)
+                }
             }
             .onDelete(perform: deleteActor)
+            .navigationDestination(for: Actor.self) { actor in
+                ActorDetailView(actor: actor)
+            }
+            
         }
     }
 }

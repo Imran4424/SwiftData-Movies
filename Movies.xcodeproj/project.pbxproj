@@ -23,6 +23,8 @@
 		1DFCEA4A2C53B9EA00368332 /* ActorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA492C53B9EA00368332 /* ActorListView.swift */; };
 		1DFCEA4C2C53C03500368332 /* ActorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA4B2C53C03500368332 /* ActorSelectionView.swift */; };
 		1DFCEA4E2C55053100368332 /* ActorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA4D2C55053100368332 /* ActorCellView.swift */; };
+		1DFCEA502C5507F800368332 /* ActorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA4F2C5507F800368332 /* ActorDetailView.swift */; };
+		1DFCEA522C5508BF00368332 /* MovieSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA512C5508BF00368332 /* MovieSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		1DFCEA492C53B9EA00368332 /* ActorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorListView.swift; sourceTree = "<group>"; };
 		1DFCEA4B2C53C03500368332 /* ActorSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorSelectionView.swift; sourceTree = "<group>"; };
 		1DFCEA4D2C55053100368332 /* ActorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCellView.swift; sourceTree = "<group>"; };
+		1DFCEA4F2C5507F800368332 /* ActorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailView.swift; sourceTree = "<group>"; };
+		1DFCEA512C5508BF00368332 /* MovieSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +114,13 @@
 				1D0448942C03259300A7734E /* AddMovieView.swift */,
 				1D608F802C43A807002CB0F2 /* MovieListView.swift */,
 				1D608F822C43B5C1002CB0F2 /* MovieDetailView.swift */,
+				1DFCEA512C5508BF00368332 /* MovieSelectionView.swift */,
 				1D608F862C43DD84002CB0F2 /* AddReviewView.swift */,
 				1DFCEA452C52762C00368332 /* ReviewListView.swift */,
 				1DFCEA492C53B9EA00368332 /* ActorListView.swift */,
 				1DFCEA4B2C53C03500368332 /* ActorSelectionView.swift */,
 				1DFCEA4D2C55053100368332 /* ActorCellView.swift */,
+				1DFCEA4F2C5507F800368332 /* ActorDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				1D608F852C43D8CF002CB0F2 /* Review.swift in Sources */,
 				1DFCEA4A2C53B9EA00368332 /* ActorListView.swift in Sources */,
 				1D0448852C03087200A7734E /* ContentView.swift in Sources */,
+				1DFCEA522C5508BF00368332 /* MovieSelectionView.swift in Sources */,
 				1D0448952C03259300A7734E /* AddMovieView.swift in Sources */,
 				1DFCEA482C52D68500368332 /* Actor.swift in Sources */,
 				1DFCEA4C2C53C03500368332 /* ActorSelectionView.swift in Sources */,
@@ -208,6 +215,7 @@
 				1DFCEA4E2C55053100368332 /* ActorCellView.swift in Sources */,
 				1D0448832C03087200A7734E /* MoviesApp.swift in Sources */,
 				1D0448922C03246F00A7734E /* Movie.swift in Sources */,
+				1DFCEA502C5507F800368332 /* ActorDetailView.swift in Sources */,
 				1D608F812C43A807002CB0F2 /* MovieListView.swift in Sources */,
 				1D608F832C43B5C1002CB0F2 /* MovieDetailView.swift in Sources */,
 				1D608F872C43DD84002CB0F2 /* AddReviewView.swift in Sources */,
