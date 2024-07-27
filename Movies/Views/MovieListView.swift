@@ -66,13 +66,25 @@ struct MovieListView: View {
     @State private var isAddMoviePresented: Bool = false
 //    @State private var isAddActorPresented: Bool = false
     @State private var actorName: String = ""
-    
     @State private var activeSheet: Sheets?
+    @State private var filterOption: FilterOption = .none
     
     var body: some View {
         VStack {
-            Text("Movies")
-                .font(.largeTitle)
+            HStack {
+                Text("Movies")
+                    .font(.largeTitle)
+                
+                Spacer()
+                
+                Button {
+                    activeSheet = .showFilter
+                } label: {
+                    Text("Filter")
+                }
+
+            }
+            
             ComposabeListView(movies: movies)
             
             Text("Actors")
@@ -122,7 +134,7 @@ struct MovieListView: View {
                 .presentationDetents([.medium])
                 //            .presentationDetents([.fraction(0.25)])
             case .showFilter:
-                EmptyView()
+                FilterSelectionView(filterOption: $filterOption)
             }
         }
         .fullScreenCover(isPresented: $isAddMoviePresented) {

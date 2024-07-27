@@ -25,6 +25,7 @@
 		1DFCEA4E2C55053100368332 /* ActorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA4D2C55053100368332 /* ActorCellView.swift */; };
 		1DFCEA502C5507F800368332 /* ActorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA4F2C5507F800368332 /* ActorDetailView.swift */; };
 		1DFCEA522C5508BF00368332 /* MovieSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA512C5508BF00368332 /* MovieSelectionView.swift */; };
+		1DFCEA542C557CCE00368332 /* FilterSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFCEA532C557CCE00368332 /* FilterSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		1DFCEA4D2C55053100368332 /* ActorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCellView.swift; sourceTree = "<group>"; };
 		1DFCEA4F2C5507F800368332 /* ActorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailView.swift; sourceTree = "<group>"; };
 		1DFCEA512C5508BF00368332 /* MovieSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectionView.swift; sourceTree = "<group>"; };
+		1DFCEA532C557CCE00368332 /* FilterSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				1DFCEA4B2C53C03500368332 /* ActorSelectionView.swift */,
 				1DFCEA4D2C55053100368332 /* ActorCellView.swift */,
 				1DFCEA4F2C5507F800368332 /* ActorDetailView.swift */,
+				1DFCEA532C557CCE00368332 /* FilterSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				1DFCEA4A2C53B9EA00368332 /* ActorListView.swift in Sources */,
 				1D0448852C03087200A7734E /* ContentView.swift in Sources */,
 				1DFCEA522C5508BF00368332 /* MovieSelectionView.swift in Sources */,
+				1DFCEA542C557CCE00368332 /* FilterSelectionView.swift in Sources */,
 				1D0448952C03259300A7734E /* AddMovieView.swift in Sources */,
 				1DFCEA482C52D68500368332 /* Actor.swift in Sources */,
 				1DFCEA4C2C53C03500368332 /* ActorSelectionView.swift in Sources */,
