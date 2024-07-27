@@ -53,6 +53,18 @@ struct MovieDetailView: View {
                     ReviewListView(movie: movie)
                 }
             }
+            
+            Section("Actors") {
+                if movie.actors.isEmpty {
+                    ContentUnavailableView {
+                        Text("No actors information available")
+                    }
+                } else {
+                    List(movie.actors) { actor in
+                        ActorCellView(actor: actor)
+                    }
+                }
+            }
         }
         .onAppear {
             title = movie.title
