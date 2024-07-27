@@ -21,6 +21,10 @@ struct ActorDetailView: View {
                     selectedMovies = Set(actor.movies)
                 }
         }
+        .onChange(of: selectedMovies) {
+            actor.movies = Array(selectedMovies)
+            context.insert(actor)
+        }
         .navigationTitle(actor.name)
     }
 }

@@ -20,10 +20,10 @@ struct ActorListView: View {
                 }
             }
             .onDelete(perform: deleteActor)
-            .navigationDestination(for: Actor.self) { actor in
-                ActorDetailView(actor: actor)
-            }
-            
+        }
+        // never put navigation destination inside list or foreach
+        .navigationDestination(for: Actor.self) { actor in
+            ActorDetailView(actor: actor)
         }
     }
 }

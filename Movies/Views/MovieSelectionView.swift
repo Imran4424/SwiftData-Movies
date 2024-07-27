@@ -16,15 +16,15 @@ struct MovieSelectionView: View {
     var body: some View {
         List(movies) { movie in
             HStack {
-//                Image(systemName: selectedMovies.contains(movie) ? "checkmark.square": "square")
-//                    .onTapGesture {
-//                        if !selectedMovies.contains(movie) {
-//                            selectedMovies.insert(movie)
-//                        } else {
-//                            selectedMovies.remove(movie)
-//                        }
-//                    }
-                Text(movie.name)
+                Image(systemName: selectedMovies.contains(movie) ? "checkmark.square": "square")
+                    .onTapGesture {
+                        if !selectedMovies.contains(movie) {
+                            selectedMovies.insert(movie)
+                        } else {
+                            selectedMovies.remove(movie)
+                        }
+                    }
+                Text(movie.title)
             }
         }
     }
