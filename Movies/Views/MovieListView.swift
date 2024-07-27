@@ -8,6 +8,16 @@
 import SwiftData
 import SwiftUI
 
+enum Sheets: Identifiable {
+    case addMovie
+    case addActor
+    case showFilter
+    
+    var id: Int {
+        return UUID().hashValue
+    }
+}
+
 struct ComposabeListView: View {
     let movies: [Movie]
     @Environment(\.modelContext) private var context
@@ -54,8 +64,10 @@ struct MovieListView: View {
     @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
     
     @State private var isAddMoviePresented: Bool = false
-    @State private var isAddActorPresented: Bool = false
+//    @State private var isAddActorPresented: Bool = false
     @State private var actorName: String = ""
+    
+    @State private var activeSheet: Sheets?
     
     var body: some View {
         VStack {
@@ -70,7 +82,8 @@ struct MovieListView: View {
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
-                    isAddActorPresented = true
+                    activeSheet = .addActor
+//                    isAddActorPresented = true
                 } label: {
                     Text("Add Actor")
                 }
@@ -78,30 +91,39 @@ struct MovieListView: View {
             
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
+//                    activeSheet = .addMovie
                     isAddMoviePresented.toggle()
                 } label: {
                     Text("Add Movie")
                 }
             }
         }
-        .sheet(isPresented: $isAddActorPresented) {
-            VStack {
-                Text("Add Actor")
-                    .font(.largeTitle)
-                
-                TextField("Actor name", text: $actorName)
-                    .textFieldStyle(.roundedBorder)
-                    .padding()
-                
-                Button {
-                    isAddActorPresented = false
-                    saveActor()
-                } label: {
-                    Text("Save")
+        .sheet(item: $activeSheet) { activeSheet in
+            switch activeSheet {
+            case .addMovie:
+                EmptyView()
+            case .addActor:
+                VStack {
+                    Text("Add Actor")
+                        .font(.largeTitle)
+                    
+                    TextField("Actor name", text: $actorName)
+                        .textFieldStyle(.roundedBorder)
+                        .padding()
+                    
+                    Button {
+//                        isAddActorPresented = false
+                        saveActor()
+                        self.activeSheet = nil
+                    } label: {
+                        Text("Save")
+                    }
                 }
+                .presentationDetents([.medium])
+                //            .presentationDetents([.fraction(0.25)])
+            case .showFilter:
+                EmptyView()
             }
-            .presentationDetents([.medium])
-//            .presentationDetents([.fraction(0.25)])
         }
         .fullScreenCover(isPresented: $isAddMoviePresented) {
             NavigationStack {
