@@ -19,7 +19,21 @@ enum Sheets: Identifiable {
 }
 
 struct ComposabeListView: View {
-    let movies: [Movie]
+    @Query private var movies: [Movie]
+    
+    let filterOption: FilterOption
+    
+    init(filterOption: FilterOption) {
+        self.filterOption = filterOption
+        
+        switch self.filterOption {
+        case .title(let movieTitle):
+            _movies = Query(filter: #Predicate { $0.title.contains(movieTitle) })
+        case .none:
+            _movies = Query()
+        }
+    }
+    
     @Environment(\.modelContext) private var context
     
     var body: some View {
@@ -60,7 +74,7 @@ extension ComposabeListView {
 struct MovieListView: View {
     @Environment(\.modelContext) private var context
     
-    @Query private var movies: [Movie]
+//    @Query private var movies: [Movie]
     @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
     
     @State private var isAddMoviePresented: Bool = false
@@ -85,7 +99,7 @@ struct MovieListView: View {
 
             }
             
-            ComposabeListView(movies: movies)
+            ComposabeListView(filterOption: filterOption)
             
             Text("Actors")
                 .font(.largeTitle)
