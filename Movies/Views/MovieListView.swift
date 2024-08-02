@@ -29,6 +29,10 @@ struct ComposabeListView: View {
         switch self.filterOption {
         case .title(let movieTitle):
             _movies = Query(filter: #Predicate { $0.title.contains(movieTitle) })
+        case .reviewsCount(let numberOfReviews):
+            _movies = Query(filter: #Predicate { $0.reviews.count >= numberOfReviews })
+        case .actorsCount(let numberOfActors):
+            _movies = Query(filter: #Predicate { $0.actors.count >= numberOfActors })
         case .none:
             _movies = Query()
         }
@@ -41,7 +45,13 @@ struct ComposabeListView: View {
             ForEach(movies) { movie in
                 NavigationLink(value: movie) {
                     HStack {
-                        Text(movie.title)
+                        VStack(alignment: .leading) {
+                            Text(movie.title)
+                            Text("Number of Reviews: \(movie.reviewsCount)")
+                                .font(.caption)
+                            Text("Number of Actors: \(movie.actorsCount)")
+                                .font(.caption)
+                        }
                         Spacer()
                         Text(movie.year.description)
                     }

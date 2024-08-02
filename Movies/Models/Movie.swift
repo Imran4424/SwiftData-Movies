@@ -13,6 +13,14 @@ final class Movie {
     var title: String
     var year: Int
     
+    var reviewsCount: Int {
+        return reviews.count
+    }
+    
+    var actorsCount: Int {
+        return actors.count
+    }
+    
     // MARK: - One to many
     @Relationship(deleteRule: .cascade, inverse: \Review.movie)
     var reviews: [Review] = []
