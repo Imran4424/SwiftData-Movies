@@ -15,6 +15,7 @@ struct AddMovieView: View {
     @State private var title: String = ""
     @State private var year: Int?
     @State private var selectedActors: Set<Actor> = []
+    @State private var selectedGenre: Genre = .action
     
     var isFormValid: Bool {
         if title.isEmptyOrWhiteSpace {
@@ -34,6 +35,13 @@ struct AddMovieView: View {
     
     var body: some View {
         Form {
+            Picker("Select Genre", selection: $selectedGenre) {
+                ForEach(Genre.allCases) { genre in
+                    Text(genre.title).tag(genre)
+                }
+            }
+            .pickerStyle(.segmented)
+            
             TextField("Title", text: $title)
             TextField("Year", value: $year, format: .number)
             
@@ -66,7 +74,7 @@ extension AddMovieView {
             return
         }
         
-        let movie = Movie(title: title, year: year)
+        let movie = Movie(title: title, year: year, genre: selectedGenre)
         movie.actors = Array(selectedActors)
         
         selectedActors.forEach { actor in

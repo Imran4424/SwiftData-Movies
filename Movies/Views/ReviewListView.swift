@@ -42,5 +42,5 @@ extension ReviewListView {
 }
 
 #Preview {
-    ReviewListView(movie: Movie(title: "test", year: 2024))
+    ReviewListView(movie: Movie(title: "test", year: 2024, genre: .action))
 }
