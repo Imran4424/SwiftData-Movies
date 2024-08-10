@@ -47,6 +47,7 @@ struct ComposabeListView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             Text(movie.title)
+                            Text(movie.genre.title)
                             Text("Number of Reviews: \(movie.reviewsCount)")
                                 .font(.caption)
                             Text("Number of Actors: \(movie.actorsCount)")
