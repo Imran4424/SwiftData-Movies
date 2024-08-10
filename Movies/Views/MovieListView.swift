@@ -88,7 +88,7 @@ struct MovieListView: View {
     @Query(sort: \Actor.name, order: .forward) private var actors: [Actor]
     
     @State private var isAddMoviePresented: Bool = false
-//    @State private var isAddActorPresented: Bool = false
+    @State private var isAddActorPresented: Bool = false
     @State private var actorName: String = ""
     @State private var activeSheet: Sheets?
     @State private var filterOption: FilterOption = .none
@@ -118,8 +118,8 @@ struct MovieListView: View {
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
-                    activeSheet = .addActor
-//                    isAddActorPresented = true
+//                    activeSheet = .addActor
+                    isAddActorPresented = true
                 } label: {
                     Text("Add Actor")
                 }
@@ -148,7 +148,7 @@ struct MovieListView: View {
                         .padding()
                     
                     Button {
-//                        isAddActorPresented = false
+                            isAddActorPresented = false
                         saveActor()
                         self.activeSheet = nil
                     } label: {
@@ -160,6 +160,25 @@ struct MovieListView: View {
             case .showFilter:
                 FilterSelectionView(filterOption: $filterOption)
             }
+        }
+        .sheet(isPresented: $isAddActorPresented) {
+            VStack {
+                Text("Add Actor")
+                    .font(.largeTitle)
+                
+                TextField("Actor name", text: $actorName)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                
+                Button {
+                        isAddActorPresented = false
+                    saveActor()
+//                    self.activeSheet = nil
+                } label: {
+                    Text("Save")
+                }
+            }
+            .presentationDetents([.medium])
         }
         .fullScreenCover(isPresented: $isAddMoviePresented) {
             NavigationStack {
